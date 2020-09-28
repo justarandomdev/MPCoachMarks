@@ -212,7 +212,7 @@ NSString *const kContinueLabelText = @"Tap to continue";
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
     [self.delegate coachMarksViewDidClicked:self atIndex:markIndex];
-    [self cleanup:YES];
+    [self goToCoachMarkIndexed:(markIndex+1)];
 }
 
 - (UIImage*)fetchImage:(NSString*)name {
